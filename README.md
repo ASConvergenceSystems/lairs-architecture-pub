@@ -6,6 +6,7 @@ Executive Summary**
 
 LAIRS (Local Autonomous Intelligence & Response System) is a local‑first, user‑owned cognitive runtime designed to operate inside secure, segmented environments. It is paired with SentiNet, a zero‑trust secure fabric, and a family of Sentinel modules that provide enforcement, telemetry, integrity, and governed evolution. Together, they form a modular, composable platform for digital‑sovereign infrastructure.
 
+
 **#Core Platform Architecture (Public)
 High‑Level Stack:**
 
@@ -16,6 +17,7 @@ Ultimate authority,
 Required for all critical actions, approvals, and irreversible changes.
 
 
+
 **#LAIRS Core (Cognitive Runtime):**
 
 Orchestration and reasoning engine,
@@ -23,6 +25,7 @@ Orchestration and reasoning engine,
 Memory, identity, and state management,
 
 Policy hooks, audit, and explainability.
+
 
 
 **#SentiNet Fabric (Secure Network Layer)**
@@ -50,6 +53,7 @@ Model training, evaluation, and lifecycle governance
 Dataset control and transparency
 
 
+
 **#LAIRS Core
 
 Role: Cognitive runtime and orchestration layer
@@ -73,6 +77,7 @@ No autonomous irreversible actions,
 Human‑in‑the‑loop governance.
 
 
+
 **#SentiNet Fabric
 
 Role: Secure networking and governance fabric
@@ -88,6 +93,7 @@ Internal DNS and PKI anchoring,
 Controlled bridge modes between trust zones.
 
 
+
 **#Key Concepts:**
 
 Every module is treated as untrusted until proven otherwise,
@@ -95,6 +101,7 @@ Every module is treated as untrusted until proven otherwise,
 Policy enforcement occurs at the fabric layer,
 
 LKG (Last Known Good) state validation,
+
 
 
 **#Sentinel Module Family**
@@ -112,7 +119,8 @@ Secure telemetry to LAIRS,
 Foundation module for trust establishment.
 
 
-**#Sentinel Gate (Gated Community)**
+
+#**Sentinel Gate (Gated Community)**
 
 **Purpose: Policy enforcement and controlled access**
 
