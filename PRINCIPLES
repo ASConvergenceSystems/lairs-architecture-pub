@@ -1,0 +1,144 @@
+# Principles
+
+These principles guide all design, implementation, and governance decisions within the LAIRS & SentiNet platform.
+
+They are intentionally conservative. Breaking a principle requires justification, not convenience.
+
+---
+
+## 1. Human-in-the-Loop Is Mandatory
+
+Any action that:
+
+* modifies system state
+* alters trust boundaries
+* impacts security posture
+
+must require explicit human authorization.
+
+Automation assists. Humans decide.
+
+---
+
+## 2. Fail-Closed Beats Fail-Open
+
+When the system encounters:
+
+* ambiguity
+* validation failure
+* policy mismatch
+
+it must deny, isolate, or halt.
+
+Availability is secondary to integrity.
+
+---
+
+## 3. No Implicit Trust
+
+Trust must be:
+
+* explicit
+* minimal
+* continuously validated
+
+Network position, prior success, or convenience are not trust signals.
+
+---
+
+## 4. Replaceability Over Permanence
+
+Components are transient.
+Architecture is durable.
+
+Models, modules, and tools must be:
+
+* replaceable
+* versioned
+* governed
+
+Nothing is sacred except control and clarity.
+
+---
+
+## 5. Evidence Is Required
+
+Every decision must produce:
+
+* observable inputs
+* a reasoning path
+* an auditable outcome
+
+Actions without evidence are treated as failures.
+
+---
+
+## 6. Advisory AI Only
+
+AI components may:
+
+* analyze
+* recommend
+* simulate
+
+They may not:
+
+* self-authorize
+* self-modify
+* bypass governance
+
+---
+
+## 7. Controlled Evolution
+
+Systems must evolve.
+They must not mutate.
+
+Change occurs through:
+
+* proposal
+* review
+* approval
+* staged application
+* rollback capability
+
+---
+
+## 8. Least Privilege Everywhere
+
+Permissions are:
+
+* narrowly scoped
+* revocable
+* explicitly granted
+
+Broad authority is treated as a vulnerability.
+
+---
+
+## 9. Transparency Over Convenience
+
+If a feature:
+
+* obscures behavior
+* hides decision-making
+* prevents inspection
+
+it is considered harmful, regardless of utility.
+
+---
+
+## 10. Defensive Posture by Default
+
+LAIRS does not assume a friendly environment.
+
+Design assumes:
+
+* internal compromise is possible
+* misconfiguration will occur
+* humans will make mistakes
+
+The system must remain understandable and recoverable under stress.
+
+---
+
