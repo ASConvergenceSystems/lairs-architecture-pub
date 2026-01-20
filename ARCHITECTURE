@@ -1,4 +1,4 @@
-**#LAIRS & SentiNet Architecture (Public Overview)**
+**LAIRS & SentiNet Architecture (Public Overview)**
 
 This document describes the public, high-level architecture for the LAIRS & SentiNet platform.
 It focuses on structure, governance, trust boundaries, and system roles.
@@ -14,7 +14,7 @@ deployment-specific configurations,
 exploit-relevant details.
 
 
-**#1) Platform at a Glance**
+**1) Platform at a Glance**
 
 LAIRS is the cognitive runtime (memory, identity, orchestration, policy).
 SentiNet is the secure fabric (zones, default-deny segmentation, service identity).
@@ -53,7 +53,7 @@ SentiNet is the secure fabric (zones, default-deny segmentation, service identit
 
 Key idea: LAIRS governs intent, SentiNet governs movement, Sentinel modules enforce and observe.
 
-**#2) LAIRS Core (Cognitive Runtime)**
+#2) LAIRS Core (Cognitive Runtime)
 
 LAIRS is a governed intelligence substrate, not a single model.
 Models are treated as replaceable cognitive engines; governance and auditability are first-class.
@@ -88,7 +88,7 @@ Models are treated as replaceable cognitive engines; governance and auditability
 Key principle:
 LAIRS does not act freely — it routes all actions through policy gates and produces verifiable evidence for every decision path.
 
-**#3) SentiNet Fabric (Security, Identity, Zones)**
+#3) SentiNet Fabric (Security, Identity, Zones)
 
 SentiNet provides environment-level safety: segmentation, service identity, and controlled ingress/egress.
 
@@ -124,7 +124,7 @@ SentiNet provides environment-level safety: segmentation, service identity, and 
  Last-Known-Good (LKG) validation at boundaries
 
 
-**SentiNet enforces:**
+SentiNet enforces:
 
 default-deny network posture,
 
@@ -135,7 +135,7 @@ policy-approved flows only,
 fail-closed behavior on uncertainty.
 
 
-**#4) Sentinel Module Suite (Product Boxes)**
+**4) Sentinel Module Suite (Product Boxes)**
 
 Sentinel modules are independent products that interlock through
 LAIRS (mind) and SentiNet (fabric).
@@ -211,7 +211,7 @@ No autonomous system modification.
 The system may detect, reason, and propose — but only a human may authorize change, and only through controlled staging with rollback.
 
 
-**#6) Repository Scope**
+**6) Repository Scope**
 
 **This repository contains:**
 
