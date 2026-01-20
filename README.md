@@ -11,9 +11,7 @@ LAIRS (Local Autonomous Intelligence & Response System) is a local‑first, user
 High‑Level Stack:**
 
 Human Master Administrator,
-
 Ultimate authority,
-
 Required for all critical actions, approvals, and irreversible changes.
 
 
@@ -21,35 +19,27 @@ Required for all critical actions, approvals, and irreversible changes.
 #**LAIRS Core (Cognitive Runtime):**
 
 Orchestration and reasoning engine,
-
 Memory, identity, and state management,
-
 Policy hooks, audit, and explainability.
 
 
 
 **#SentiNet Fabric (Secure Network Layer)**
-
 Zero‑trust network fabric,
-
 Default‑deny segmentation,
-
 Controlled bridging and policy enforcement.
 
 
 #**Sentinel Module Family (Products)**
 
 Pluggable, governed modules,
-
 Each module must pass SentiNet trust checks,
-
 Last‑Known‑Good (LKG) enforcement.
 
 
 #**AiCraft (AI Orchestration & Training)**
 
 Model training, evaluation, and lifecycle governance
-
 Dataset control and transparency
 
 
@@ -61,19 +51,14 @@ Dataset control and transparency
 **Responsibilities:**
 
 Runtime coordination between modules,
-
 Event routing and decision support,
-
 Identity and policy anchoring,
-
 Audit logging and explainability.
 
 **Design Principles:**
 
 Local‑first execution,
-
 No autonomous irreversible actions,
-
 Human‑in‑the‑loop governance.
 
 
@@ -85,11 +70,8 @@ Human‑in‑the‑loop governance.
 **Capabilities:**
 
 Zone‑based segmentation,
-
 Default‑deny communication model,
-
 Internal DNS and PKI anchoring,
-
 Controlled bridge modes between trust zones.
 
 
@@ -97,9 +79,7 @@ Controlled bridge modes between trust zones.
 #**Key Concepts:**
 
 Every module is treated as untrusted until proven otherwise,
-
 Policy enforcement occurs at the fabric layer,
-
 LKG (Last Known Good) state validation,
 
 
@@ -111,11 +91,8 @@ LKG (Last Known Good) state validation,
 **Purpose: Integrity, telemetry, and local attestation**
 
 Host‑level monitoring,
-
 Integrity checks,
-
 Secure telemetry to LAIRS,
-
 Foundation module for trust establishment.
 
 
@@ -125,11 +102,8 @@ Foundation module for trust establishment.
 **Purpose: Policy enforcement and controlled access**
 
 Entry control into SentiNet fabric,
-
 Policy validation,
-
 Trust scoring and rejection handling,
-
 Fail‑closed by design.
 
 
@@ -138,11 +112,8 @@ Fail‑closed by design.
 **Purpose: Malware detection and quarantine**
 
 Local scanning,
-
 Quarantine workflows,
-
 Non‑cloud dependent operation,
-
 Integrates with Agent and Gate.
 
 
@@ -151,11 +122,8 @@ Integrates with Agent and Gate.
 **Purpose: Runtime security and anomaly detection**
 
 Behavioral monitoring,
-
 Tamper detection,
-
 Escalation signaling,
-
 Defensive response triggers,
 
 
@@ -164,13 +132,9 @@ Defensive response triggers,
 **Purpose: Human‑approved system evolution**
 
 Detects issues and degradation,
-
 Generates candidate patches,
-
 Stages changes for review,
-
 Requires cryptographic human approval,
-
 Applies only at reboot boundaries with rollback.
 
 **Important: Forge is advisory‑only. It cannot self‑modify autonomously.**
@@ -181,33 +145,25 @@ Applies only at reboot boundaries with rollback.
 **Purpose: Data minimization and forensic hygiene**
 
 Log scrubbing,
-
 Data retention control,
-
 Ephemeral runtime handling,
-
 Privacy‑preserving operations,
 
 #**AiCraft**
 
-Role: AI training and lifecycle governance**
+Role: Local AI training and lifecycle governance**
 
 **Capabilities:**
 
 Dataset ingestion and validation,
-
 Model training and evaluation,
-
 Versioned model artifacts,
-
 Transparency into training behavior,
 
 **Design Principles:**
 
 Explicit datasets,
-
 No hidden learning,
-
 Human‑directed experimentation,
 
 #**Governance Model**
@@ -215,27 +171,18 @@ Human‑directed experimentation,
 **Human Master Admin is always required for:**
 
 Policy changes,
-
 Patch application,
-
 Trust overrides
-
 System evolution,
-
 AI components are advisory, not sovereign,
-
 Fail‑closed is preferred over fail‑open.
 
 #**Current Development Status (Public)**
 
 Core architecture established.
-
 SentiNet fabric operational.
-
 Sentinel modules are being integrated.
-
 AiCraft functional for controlled training.
-
 Advanced features under active development.
 
 **#Guiding Philosophy****
