@@ -1,0 +1,123 @@
+# Sentinel Module Suite
+
+This document defines the **public-facing roles and boundaries** of Sentinel modules within the LAIRS & SentiNet platform.
+
+Modules are independent products that interlock through governed interfaces. No module operates autonomously or outside platform policy.
+
+---
+
+## Sentinel Agent
+
+**Role:** Endpoint integrity and telemetry
+
+**Responsibilities:**
+
+* Host and endpoint integrity checks
+* Telemetry and signal collection
+* Evidence generation for audit
+
+**Cannot:**
+
+* Enforce network policy
+* Apply system changes
+* Authorize actions
+
+---
+
+## Sentinel Gate (Gated Community)
+
+**Role:** Policy enforcement and network admission
+
+**Responsibilities:**
+
+* Enforce SentiNet access policies
+* Validate service identity
+* Control ingress and egress
+
+**Cannot:**
+
+* Reason independently
+* Override LAIRS policy decisions
+* Modify zone definitions
+
+---
+
+## Sentinel AV
+
+**Role:** Malware detection and containment
+
+**Responsibilities:**
+
+* Local scanning
+* Quarantine workflows
+* Trust scoring inputs
+
+**Cannot:**
+
+* Perform retaliation
+* Modify system policy
+* Self-authorize remediation
+
+---
+
+## Sentinel Watchdog
+
+**Role:** Runtime security and drift detection
+
+**Responsibilities:**
+
+* Behavioral anomaly detection
+* Tamper and drift monitoring
+* Escalation signaling
+
+**Cannot:**
+
+* Take corrective action without approval
+* Modify runtime configuration
+
+---
+
+## Sentinel Forge
+
+**Role:** Governed system evolution
+
+**Responsibilities:**
+
+* Detect degradation or issues
+* Generate patch proposals
+* Stage and test changes
+
+**Cannot:**
+
+* Apply patches autonomously
+* Modify governance rules
+* Bypass approval workflows
+
+---
+
+## LNT (Leave No Trace)
+
+**Role:** Data hygiene and minimization
+
+**Responsibilities:**
+
+* Log scrubbing and retention control
+* Ephemeral data handling
+* Privacy-preserving operations
+
+**Cannot:**
+
+* Destroy required audit evidence
+* Interfere with governance logs
+
+---
+
+## Module Interaction Rules
+
+* All modules communicate through SentiNet
+* All actions are routed through LAIRS policy gates
+* Modules are replaceable and non-sovereign
+
+---
+
+*End of module definitions.*
