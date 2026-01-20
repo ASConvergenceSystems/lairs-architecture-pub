@@ -7,7 +7,7 @@ Executive Summary**
 LAIRS (Local Autonomous Intelligence & Response System) is a local‑first, user‑owned cognitive runtime designed to operate inside secure, segmented environments. It is paired with SentiNet, a zero‑trust secure fabric, and a family of Sentinel modules that provide enforcement, telemetry, integrity, and governed evolution. Together, they form a modular, composable platform for digital‑sovereign infrastructure.
 
 
-**#Core Platform Architecture (Public)
+#**Core Platform Architecture (Public)
 High‑Level Stack:**
 
 Human Master Administrator,
@@ -18,7 +18,7 @@ Required for all critical actions, approvals, and irreversible changes.
 
 
 
-**#LAIRS Core (Cognitive Runtime):**
+#**LAIRS Core (Cognitive Runtime):**
 
 Orchestration and reasoning engine,
 
@@ -37,7 +37,7 @@ Default‑deny segmentation,
 Controlled bridging and policy enforcement.
 
 
-**#Sentinel Module Family (Products)**
+#**Sentinel Module Family (Products)**
 
 Pluggable, governed modules,
 
@@ -46,7 +46,7 @@ Each module must pass SentiNet trust checks,
 Last‑Known‑Good (LKG) enforcement.
 
 
-**#AiCraft (AI Orchestration & Training)**
+#**AiCraft (AI Orchestration & Training)**
 
 Model training, evaluation, and lifecycle governance
 
@@ -54,11 +54,11 @@ Dataset control and transparency
 
 
 
-**#LAIRS Core
+#**LAIRS Core**
 
-Role: Cognitive runtime and orchestration layer
+**Role: Cognitive runtime and orchestration layer**
 
-Responsibilities:**
+**Responsibilities:**
 
 Runtime coordination between modules,
 
@@ -68,7 +68,7 @@ Identity and policy anchoring,
 
 Audit logging and explainability.
 
-Design Principles:
+**Design Principles:**
 
 Local‑first execution,
 
@@ -78,11 +78,11 @@ Human‑in‑the‑loop governance.
 
 
 
-**#SentiNet Fabric
+#**SentiNet Fabric**
 
-Role: Secure networking and governance fabric
+**Role: Secure networking and governance fabric**
 
-Capabilities:**
+**Capabilities:**
 
 Zone‑based segmentation,
 
@@ -94,7 +94,7 @@ Controlled bridge modes between trust zones.
 
 
 
-**#Key Concepts:**
+#**Key Concepts:**
 
 Every module is treated as untrusted until proven otherwise,
 
@@ -104,7 +104,7 @@ LKG (Last Known Good) state validation,
 
 
 
-**#Sentinel Module Family**
+#**Sentinel Module Family**
 
 #**Sentinel Agent**
 
