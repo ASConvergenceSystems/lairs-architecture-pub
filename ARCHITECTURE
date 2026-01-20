@@ -1,0 +1,236 @@
+**#LAIRS & SentiNet Architecture (Public Overview)**
+
+This document describes the public, high-level architecture for the LAIRS & SentiNet platform.
+It focuses on structure, governance, trust boundaries, and system roles.
+
+It intentionally omits:
+
+production implementations,
+
+cryptographic material,
+
+deployment-specific configurations,
+
+exploit-relevant details.
+
+
+**#1) Platform at a Glance**
+
+LAIRS is the cognitive runtime (memory, identity, orchestration, policy).
+SentiNet is the secure fabric (zones, default-deny segmentation, service identity).
+
+[ Human Master Admin ]
+          |
+          v
++--------------------------------+
+|        LAIRS (Mind)             |
+|--------------------------------|
+|  Runtime / Orchestration        |
+|  Memory + Identity              |
+|  Policy Hooks + Authorization   |
+|  Audit & Explainability         |
++---------------+----------------+
+                |
+                v
++--------------------------------+
+|       SentiNet (Fabric)         |
+|--------------------------------|
+|  Zones + Default-Deny           |
+|  Internal DNS + PKI             |
+|  Service Identity (mTLS)        |
+|  Controlled Bridge Modes        |
+|  LKG (Last-Known-Good) Checks   |
++---------------+----------------+
+                |
+                v
++--------------------------------+
+|   Sentinel Modules (Products)   |
+|--------------------------------|
+|  Agent | Gate | AV | Watchdog  |
+|        | Forge | LNT            |
++--------------------------------+
+
+
+Key idea: LAIRS governs intent, SentiNet governs movement, Sentinel modules enforce and observe.
+
+**#2) LAIRS Core (Cognitive Runtime)**
+
+LAIRS is a governed intelligence substrate, not a single model.
+Models are treated as replaceable cognitive engines; governance and auditability are first-class.
+
++----------------------------------------------------+
+|                    LAIRS Brain                     |
+|----------------------------------------------------|
+|  Session + Identity Manager                        |
+|  Policy Hooks / Authorization Gates                |
+|  Tool & Action Router                              |
+|  Model Orchestrator (generalists + specialists)    |
+|  Memory Interfaces                                 |
+|  Audit Log / Event Ledger                          |
++--------------------------+-------------------------+
+                           |
+                           v
+        +------------------+------------------+
+        |                                     |
+        v                                     v
++--------------------+            +--------------------+
+| State Store        |            | Vector Memory      |
+| (configs, profiles)|            | (retrieval)        |
++--------------------+            +--------------------+
+        |
+        v
++----------------------------+
+| Append-only Event / Audit  |
+| Ledger (verifiable trail)  |
++----------------------------+
+
+
+Key principle:
+LAIRS does not act freely — it routes all actions through policy gates and produces verifiable evidence for every decision path.
+
+**#3) SentiNet Fabric (Security, Identity, Zones)**
+
+SentiNet provides environment-level safety: segmentation, service identity, and controlled ingress/egress.
+
+                   +-------------------------+
+                   |   Controlled Bridge     |
+                   |   (Mode A / Mode B)     |
+                   +-----------+-------------+
+                               |
+                               v
++------------------------------------------------------------------+
+|                          SentiNet Zones                           |
+|------------------------------------------------------------------|
+| Zone 1: Core / Control                                            |
+|   - LAIRS Brain                                                   |
+|   - Governance services                                          |
+|                                                                  |
+| Zone 2: Security Services                                        |
+|   - Sentinel Gate                                                 |
+|   - Sentinel Watchdog                                             |
+|   - Sentinel AV                                                   |
+|                                                                  |
+| Zone 3: Workloads / Applications                                 |
+|   - User services                                                 |
+|   - Integrations                                                  |
+|                                                                  |
+| Zone 4: Edge / IoT / Endpoints                                   |
+|   - Sentinel Agents                                               |
+|   - Sensors, devices                                              |
++------------------------------------------------------------------+
+ Default-Deny VLAN Segmentation
+ Service Identity (mTLS-backed)
+ Internal DNS + PKI (issuance + rotation)
+ Last-Known-Good (LKG) validation at boundaries
+
+
+**SentiNet enforces:**
+
+default-deny network posture,
+
+service-level identity, not IP trust,
+
+policy-approved flows only,
+
+fail-closed behavior on uncertainty.
+
+
+**#4) Sentinel Module Suite (Product Boxes)**
+
+Sentinel modules are independent products that interlock through
+LAIRS (mind) and SentiNet (fabric).
+
++---------------------------+    +---------------------------+
+|      Sentinel Agent       |    |       Sentinel Gate       |
+|---------------------------|    |---------------------------|
+| Integrity & telemetry     |    | Policy enforcement        |
+| Host / endpoint signals   |    | Network admission control|
+| Evidence generation       |    | Controlled ingress/egress|
++-------------+-------------+    +-------------+-------------+
+              \                              /
+               \                            /
+                v                          v
+                 +------------------------+
+                 |       LAIRS Brain      |
+                 +------------------------+
+                ^                          ^
+               /                            \
+              /                              \
++-------------+-------------+    +-------------+-------------+
+|       Sentinel AV          |    |     Sentinel Forge        |
+|---------------------------|    |---------------------------|
+| Scan & quarantine         |    | Patch proposal engine     |
+| Trust scoring             |    | Staging + rollback model  |
++---------------------------+    +---------------------------+
+
+              +---------------------------+
+              |     Sentinel Watchdog     |
+              |---------------------------|
+              | Runtime anomaly detection |
+              | Tamper & drift detection  |
+              +---------------------------+
+
+              +---------------------------+
+              |   LNT (Leave No Trace)    |
+              |---------------------------|
+              | Data minimization         |
+              | Log hygiene & retention   |
+              +---------------------------+
+
+
+No Sentinel module can:
+
+bypass LAIRS policy gates
+
+bypass SentiNet zone controls
+
+self-authorize irreversible actions
+
+**#5) Governance Flow (Human Root Authority)**
+
+This is the platform’s non-negotiable safety model.
+
+(Observe) -> (Analyze) -> (Propose) -> (Approve) -> (Apply) -> (Verify)
+
++-----------+   +-----------+   +-----------+   +-----------+   +---------+
+| Agent /   |-> |  LAIRS    |-> |  Forge    |-> |  Human    |-> |  Apply  |
+| Gate / AV |   | Reasoning |   | Proposal  |   | Master    |   | (reboot |
++-----------+   +-----------+   +-----------+   | Admin     |   | boundary)
+                                                   +-----------+
+                                                         |
+                                                         v
+                                               +-------------------+
+                                               | Audit Evidence +  |
+                                               | Rollback Path     |
+                                               +-------------------+
+
+
+Principle:
+
+No autonomous system modification.
+The system may detect, reason, and propose — but only a human may authorize change, and only through controlled staging with rollback.
+
+
+**#6) Repository Scope**
+
+**This repository contains:**
+
+public architecture documentation,
+
+governance and trust models,
+
+module boundaries and system roles,
+
+non-operational diagrams,
+
+**This repository does not contain:**
+
+production code or binaries
+
+cryptographic keys or signing material
+
+deployable configurations
+
+sensitive operational logic
+
+Core implementations are maintained separately under controlled licensing.
