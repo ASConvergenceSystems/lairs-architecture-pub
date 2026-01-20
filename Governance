@@ -1,0 +1,121 @@
+# Governance Model
+
+## Purpose
+
+This document defines the **governance and authority model** of the LAIRS & SentiNet platform. Governance is a first-class system concern and is enforced by design, not policy alone.
+
+The platform is explicitly **human-governed**. Artificial intelligence components are advisory and assistive; they do not possess sovereign authority.
+
+---
+
+## Core Governance Principles
+
+1. **Human Root Authority**
+
+   * A designated Human Master Administrator (HMA) is the ultimate authority
+   * No system component may override or bypass human approval
+
+2. **No Autonomous Irreversible Action**
+
+   * The system may observe, analyze, and propose
+   * Irreversible or high-impact actions require explicit human authorization
+
+3. **Fail-Closed by Default**
+
+   * Ambiguity, validation failure, or policy mismatch results in denial
+   * Availability is secondary to integrity and control
+
+4. **Evidence Over Assumption**
+
+   * All decisions produce verifiable audit evidence
+   * Actions without evidence are treated as invalid
+
+---
+
+## Authority Layers
+
+```
+Human Master Admin (Root Authority)
+        |
+        v
+LAIRS Policy Gates
+        |
+        v
+SentiNet Fabric Enforcement
+        |
+        v
+Sentinel Module Actions
+```
+
+* **Human Master Admin**: Final approval and override authority
+* **LAIRS**: Intent reasoning, policy evaluation, authorization
+* **SentiNet**: Network and service-level enforcement
+* **Sentinel Modules**: Observation, enforcement, and proposal
+
+---
+
+## Governed Change Model
+
+All system changes follow a controlled lifecycle:
+
+```
+Observe -> Analyze -> Propose -> Approve -> Apply -> Verify
+```
+
+* Observation is performed by Sentinel modules
+* Analysis and proposal are coordinated by LAIRS
+* Approval is performed by the Human Master Admin
+* Application occurs at controlled boundaries (e.g., reboot)
+* Verification produces audit evidence and rollback readiness
+
+---
+
+## Sentinel Forge Constraints
+
+Sentinel Forge operates under strict governance constraints:
+
+* Advisory-only operation
+* No direct system modification
+* Patch generation and testing permitted
+* Application requires:
+
+  * Human cryptographic approval
+  * Staging
+  * Rollback capability
+
+Forge cannot:
+
+* Self-apply patches
+* Modify governance rules
+* Bypass SentiNet or LAIRS controls
+
+---
+
+## Audit & Accountability
+
+* All governance decisions are logged
+* Audit logs are append-only
+* Evidence includes:
+
+  * Inputs
+  * Reasoning path
+  * Authorization decision
+  * Result and verification status
+
+Audit artifacts are designed to support:
+
+* Incident review
+* Compliance analysis
+* Forensic reconstruction
+
+---
+
+## Non-Negotiable Rule
+
+> **No autonomous system modification.**
+
+This rule applies platform-wide and cannot be disabled through configuration.
+
+---
+
+
