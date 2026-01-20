@@ -1,0 +1,108 @@
+# Threat Model (Public)
+
+This document outlines the **assumed threats, trust boundaries, and non-goals** of the LAIRS & SentiNet platform. It is intentionally high-level and defensive in scope.
+
+---
+
+## Threat Assumptions
+
+LAIRS is designed to operate in environments where:
+
+* Internal compromise is possible
+* Perimeter defenses are insufficient alone
+* Misconfiguration is a common failure mode
+* Human error must be anticipated
+
+---
+
+## Primary Threat Classes
+
+### 1. Unauthorized Lateral Movement
+
+* East–west network traversal
+* Implicit trust between services
+
+**Mitigation:**
+
+* Default-deny zoning
+* Service identity (mTLS)
+* Policy-enforced flows
+
+---
+
+### 2. Privilege Escalation
+
+* Abuse of elevated credentials
+* Improper trust inheritance
+
+**Mitigation:**
+
+* Policy gates
+* Least-privilege service roles
+* Human approval for escalation
+
+---
+
+### 3. Configuration Drift
+
+* Silent divergence from known-good states
+* Unauthorized changes
+
+**Mitigation:**
+
+* Last-Known-Good (LKG) validation
+* Watchdog monitoring
+* Audit-led verification
+
+---
+
+### 4. Malicious or Compromised Components
+
+* Compromised endpoints
+* Infected workloads
+
+**Mitigation:**
+
+* Sentinel Agent telemetry
+* Sentinel AV quarantine
+* Zone isolation
+
+---
+
+### 5. Unsafe Autonomous Behavior
+
+* Unbounded AI actions
+* Self-modifying systems
+
+**Mitigation:**
+
+* Advisory-only AI roles
+* Mandatory human approval
+* Governed change model
+
+---
+
+## Explicit Non-Goals
+
+LAIRS does **not** claim to:
+
+* Prevent all breaches
+* Replace human operators
+* Provide autonomous retaliation
+* Guarantee absolute security
+
+The platform prioritizes **control, visibility, and recoverability** over claims of invulnerability.
+
+---
+
+## Trust Boundaries
+
+* Human Master Admin is the root of trust
+* LAIRS governs intent and authorization
+* SentiNet enforces movement and identity
+* Sentinel modules observe and propose
+
+Any boundary violation results in fail-closed behavior.
+
+---
+
