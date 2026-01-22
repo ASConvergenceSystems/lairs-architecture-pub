@@ -1,5 +1,5 @@
 # lairs-architecture-pub
-This document represents the current public‑safe architecture and an authoritative catalog of known LAIRS components.
+This document represents the current public‑safe architecture and an authoritative catalog of known LAIRS components. This document represents and active research artifact. The system is NOT production ready and is intended for controlled experimentation and architectural exploration.
 
 **#LAIRS Platform – Public Architecture & Module Catalog
 Executive Summary**
