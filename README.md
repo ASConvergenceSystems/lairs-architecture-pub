@@ -86,6 +86,17 @@ LKG (Last Known Good) state validation,
 
 #**Sentinel Module Family**
 
+#**Metatron’s Gate** **(Quorum & Governance)**
+
+Purpose: Intent governance and system authority control
+
+Explicit intent declaration for all sensitive actions,
+Multi-party quorum enforcement (Machine / AI / Human),
+Cryptographic approval and denial tracking,
+Observe-only and enforcement modes,
+Prevents unilateral system modification by design,
+Append-only audit trail with causal chaining.
+
 #**Sentinel Agent**
 
 **Purpose: Integrity, telemetry, and local attestation**
@@ -115,16 +126,6 @@ Local scanning,
 Quarantine workflows,
 Non‑cloud dependent operation,
 Integrates with Agent and Gate.
-
-
-#**Sentinel Watchdog**
-
-**Purpose: Runtime security and anomaly detection**
-
-Behavioral monitoring,
-Tamper detection,
-Escalation signaling,
-Defensive response triggers,
 
 
 #**Sentinel Forge (Governed Evolution)**
