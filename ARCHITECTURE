@@ -177,7 +177,7 @@ Append-only, causally chained audit log
 
 Prevents unilateral system modification by design
 
-Sentinel Gate
+Sentinel Gated Community
 
 Purpose: Policy enforcement and controlled access
 
