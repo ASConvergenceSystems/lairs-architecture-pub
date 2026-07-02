@@ -4,7 +4,7 @@ This document represents the current public‑safe architecture and an authorita
 **#LAIRS Platform – Public Architecture & Module Catalog
 Executive Summary**
 
-LAIRS (Local Autonomous Intelligence Reasoning System) is a local‑first, user‑owned cognitive runtime designed to operate inside secure, segmented environments. It is paired with SentiNet, a zero‑trust secure fabric, and a family of Sentinel modules that provide enforcement, telemetry, integrity, and governed evolution. Together, they form a modular, composable platform for digital‑sovereign infrastructure.
+LAIRS (Local Autonomous Intelligence & Reasoning System) is a local‑first, user‑owned cognitive runtime designed to operate inside secure, segmented environments. It is paired with SentiNet, a zero‑trust secure fabric, and a family of Sentinel modules that provide enforcement, telemetry, integrity, and governed evolution. Together, they form a modular, composable platform for digital‑sovereign infrastructure.
 
 
 #**Core Platform Architecture (Public)
